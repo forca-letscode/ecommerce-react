@@ -3,18 +3,23 @@ import './App.css';
 // blibioteca adicionais
 import Button from 'react-bootstrap/Button';
 import { Col, Container, Row, Form, Stack } from 'react-bootstrap';
+import Image from 'react-bootstrap/Image'
 
 function App() {
   return (
     <>
       <header>
-      <Stack direction="horizontal">
-        <div className="bg-light border">LOGO</div>
-      </Stack>
+        <Container>
+          <Stack direction="horizontal">
+            <div className="bg-light border">LOGO</div>
+          </Stack>
+        </Container>
       </header>
-      <body>
+      <body className="App">
         <div>
-        <p>Corpo</p>
+          <Container>
+            <p>Corpo</p>
+          </Container>
         </div>
         <div>
           <Container>
@@ -52,13 +57,8 @@ function App() {
                 </Row>
               </Col>
               <Col xs={3}>
-              <Row>
-                <Form.Group className="mb-3">
-                    <Form.Label htmlFor="disabledSelect">Disabled select menu</Form.Label>
-                    <Form.Select id="disabledSelect">
-                      <option>Disabled select</option>
-                    </Form.Select>
-                  </Form.Group>
+                <Row>
+                <img src={logo} className="App-logo" alt="logo" />
                 </Row>
               </Col>
               </Row>
@@ -79,8 +79,10 @@ function App() {
         </div>
       </body>
       
-      <footer>
-      <p>Roda pé</p>
+      <footer className="App">
+        <Container>
+          <p>Roda pé</p>
+        </Container>
       </footer>
     </>
   );
