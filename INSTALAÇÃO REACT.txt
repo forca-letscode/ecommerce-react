@@ -1,0 +1,9 @@
+PREPARAÇÃO DA PASTA REACT:
+npx create-react-app first-app <= "first-app" nome da pasta a ser criada (pode ser alterada)
+
+DENTRO DA PASATA CRIADA "first-app" APLICAR SO COMANDOS ABAIXO:
+npm install react-bootstrap bootstrap
+npm install react-router-dom
+
+VS CODE:
+No terminal: npm start
