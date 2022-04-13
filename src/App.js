@@ -6,6 +6,15 @@ import { Col, Container, Row, Form, Stack } from 'react-bootstrap';
 import Image from 'react-bootstrap/Image'
 
 function App() {
+
+  const cadastro = [{
+    id: 1,
+    titulo: 'Nome',
+    preco: 0,
+    inf: 'inf',
+    peso: 0
+  }]
+
   return (
     <>
       <header>
@@ -15,70 +24,80 @@ function App() {
           </Stack>
         </Container>
       </header>
-      <body className="App">
-        <div>
+
+
+      <body>
+        <div className="App">
           <Container>
-            <p>Corpo</p>
+            <p>Pesquisa</p>
           </Container>
         </div>
+
         <div>
           <Container>
-          <Form>
-            <fieldset disabled>
-              <Row>
-              <Col xs={3}>
+            <Form>
+              <fieldset>
                 <Row>
-                  <Form.Group className="mb-3">
-                      <Form.Label htmlFor="disabledTextInput">Disabled input</Form.Label>
-                      <Form.Control id="disabledTextInput" placeholder="Disabled input" />
-                  </Form.Group>
+                
+                    <Col xs={4}>
+                      <Row>
+                        <Form.Group className="mb-3">
+                            <Form.Label htmlFor="titulo">Titulo:</Form.Label>
+                            <Form.Control id="titulo" placeholder="Nome do produto" />
+                        </Form.Group>
+                      </Row>
+
+                      <Row>
+                        <Form.Group className="mb-3">
+                            <Form.Label htmlFor="preco">Preço:</Form.Label>
+                            <Form.Control type="number" id="preco" placeholder="Preço do produto" />
+                        </Form.Group>
+                      </Row>
+
+                      <Row>
+                        <Form.Group className="mb-3">
+                            <Form.Label htmlFor="inf">Informações/Descrição:</Form.Label>
+                            <Form.Control id="inf" placeholder="Informação do produto" />
+                        </Form.Group>
+                      </Row>
+                    
+                      <Row>
+                        <Form.Group className="mb-3">
+                            <Form.Label htmlFor="peso">Peso:</Form.Label>
+                            <Form.Control type="number" id="peso" placeholder="Peso do produto" />
+                        </Form.Group>
+                      </Row>
+                    </Col>
+                  
+                    <Col xs={6}>
+                      <Row>
+                      <img src={logo} className="App-logo" alt="logo" />
+                      </Row>
+                    </Col>
+                  
+                  
                 </Row>
+              </fieldset>
+
+              <fieldset>
                 <Row>
-                <Form.Group className="mb-3">
-                    <Form.Label htmlFor="disabledSelect">Disabled select menu</Form.Label>
-                    <Form.Select id="disabledSelect">
-                      <option>Disabled select</option>
-                    </Form.Select>
-                  </Form.Group>
+                  <div className="App">
+                    <Button variant="primary" size="sm">
+                      Small button
+                    </Button>{' '}
+                    <Button variant="secondary" size="sm">
+                      Small button
+                    </Button>
+                  </div>
                 </Row>
-                <Row>
-                  <Form.Group className="mb-3">
-                      <Form.Label htmlFor="disabledTextInput">Disabled input</Form.Label>
-                      <Form.Control id="disabledTextInput" placeholder="Disabled input" />
-                  </Form.Group>
-                </Row>
-                <Row>
-                <Form.Group className="mb-3">
-                    <Form.Label htmlFor="disabledSelect">Disabled select menu</Form.Label>
-                    <Form.Select id="disabledSelect">
-                      <option>Disabled select</option>
-                    </Form.Select>
-                  </Form.Group>
-                </Row>
-              </Col>
-              <Col xs={3}>
-                <Row>
-                <img src={logo} className="App-logo" alt="logo" />
-                </Row>
-              </Col>
-              </Row>
-              <Row>
-                <div>
-                  <Button variant="primary" size="sm">
-                    Small button
-                  </Button>{' '}
-                  <Button variant="secondary" size="sm">
-                    Small button
-                  </Button>
-                </div>
-              </Row>
+              </fieldset>
               
-            </fieldset>
-          </Form>
+            </Form>
           </Container>
         </div>
       </body>
       
+
       <footer className="App">
         <Container>
           <p>Roda pé</p>
