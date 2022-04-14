@@ -4,13 +4,31 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ProdutoProvider from '../src/compomente/Cadastro';
+import { createRoot } from 'react-dom/client';
+
+import {
+  BrowserRouter,
+  Route,
+  Routes
+} from 'react-router-dom';
 
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+//Rota
+const root = createRoot(document.getElementById('root'))
+
+root.render(
+  <BrowserRouter>
+    <ProdutoProvider>
+    
+        <Routes>
+
+          <Route path="/" element={<App />} /> 
+
+        </Routes>
+      
+    </ProdutoProvider>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

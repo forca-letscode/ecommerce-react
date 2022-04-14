@@ -1,19 +1,40 @@
 import logo from './logo.svg';
 import './App.css';
 // blibioteca adicionais
+import { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import { Col, Container, Row, Form, Stack } from 'react-bootstrap';
-import Image from 'react-bootstrap/Image'
+import { useParams } from "react-router-dom";
+import { API, useProdutos } from '../src/compomente/Cadastro';
 
-function App() {
 
-  const cadastro = [{
-    id: 1,
-    titulo: 'Nome',
-    preco: 0,
-    inf: 'inf',
-    peso: 0
-  }]
+const ProdutoEdit = (props) => {
+    /* const [codigo, setCodigo] = useState("") */
+    const [nome, setNome] = useState("")
+    const [preco, setPreco] = useState("")
+    const [inf, setInf] = useState("")
+    const [peso, setPeso] = useState("")
+    const [produtos, setProdutos] = API()
+
+  // Aqui pegamos o parametro. Observe que o nome da propriedade é o mesmo da definidada na rota.
+  let { id } = useParams();
+
+
+  const handlerSubmit = (event) => {
+    event.preventDefault()
+    console.log(nome)
+    console.log(preco)
+    console.log(inf)
+    console.log(peso)
+
+    setProdutos([{
+      /* codigo, */
+      nome,
+      preco,
+      inf,
+      peso
+    }])
+  }
 
   return (
     <>
@@ -26,7 +47,7 @@ function App() {
       </header>
 
 
-      <body>
+      <main>
         <div className="App">
           <Container>
             <p>Pesquisa</p>
@@ -35,36 +56,36 @@ function App() {
 
         <div>
           <Container>
-            <Form>
+            <Form onSubmit={handlerSubmit}>
               <fieldset>
                 <Row>
                 
                     <Col xs={4}>
                       <Row>
                         <Form.Group className="mb-3">
-                            <Form.Label htmlFor="titulo">Titulo:</Form.Label>
-                            <Form.Control id="titulo" placeholder="Nome do produto" />
+                            <Form.Label htmlFor="nome">Nome:</Form.Label>
+                            <Form.Control placeholder="Nome do produto" onChange={event => setNome(event.target.value)}/>
                         </Form.Group>
                       </Row>
 
                       <Row>
                         <Form.Group className="mb-3">
                             <Form.Label htmlFor="preco">Preço:</Form.Label>
-                            <Form.Control type="number" id="preco" placeholder="Preço do produto" />
+                            <Form.Control type="number" placeholder="Preço do produto" onChange={event => setPreco(event.target.value)}/>
                         </Form.Group>
                       </Row>
 
                       <Row>
                         <Form.Group className="mb-3">
                             <Form.Label htmlFor="inf">Informações/Descrição:</Form.Label>
-                            <Form.Control id="inf" placeholder="Informação do produto" />
+                            <Form.Control placeholder="Informação do produto" onChange={event => setInf(event.target.value)}/>
                         </Form.Group>
                       </Row>
                     
                       <Row>
                         <Form.Group className="mb-3">
                             <Form.Label htmlFor="peso">Peso:</Form.Label>
-                            <Form.Control type="number" id="peso" placeholder="Peso do produto" />
+                            <Form.Control type="number" placeholder="Peso do produto" onChange={event => setPeso(event.target.value)}/>
                         </Form.Group>
                       </Row>
                     </Col>
@@ -82,11 +103,11 @@ function App() {
               <fieldset>
                 <Row>
                   <div className="App">
-                    <Button variant="primary" size="sm">
-                      Small button
+                    <Button variant="primary" type="submit">
+                      Salvar
                     </Button>{' '}
-                    <Button variant="secondary" size="sm">
-                      Small button
+                    <Button variant="primary" type='reset'>
+                      Cancelar
                     </Button>
                   </div>
                 </Row>
@@ -95,7 +116,7 @@ function App() {
             </Form>
           </Container>
         </div>
-      </body>
+      </main>
       
 
       <footer className="App">
@@ -107,4 +128,4 @@ function App() {
   );
 }
 
-export default App;
+export default ProdutoEdit;
