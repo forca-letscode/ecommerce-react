@@ -1,29 +1,31 @@
+//  Importação do Bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+//  Importação das bibliotecas React
 import React from 'react';
-import App from './App';
-import ProdutoProvider from '../src/compomente/Cadastro';
 import { createRoot } from 'react-dom/client';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import {
-  BrowserRouter,
-  Route,
-  Routes
-} from 'react-router-dom';
+//  Importação das páginas
+import Cadastro from './pages/cadastro_de_produto/cadastro';
+
+//  Importação de Componentes
+import BancoDeDados from './components/BancoDeDados';
 
 
-//Rota
+//  Criação das Rotas para as Páginas
 const root = createRoot(document.getElementById('root'))
 
 root.render(
   <BrowserRouter>
-    <ProdutoProvider>
+    <BancoDeDados>
     
         <Routes>
 
-          <Route path="/" element={<App />} /> 
+          <Route path="/" element={<Cadastro />} /> 
 
         </Routes>
       
-    </ProdutoProvider>
+    </BancoDeDados>
   </BrowserRouter>
 );
