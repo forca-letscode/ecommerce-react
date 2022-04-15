@@ -1,6 +1,5 @@
 import React from "react";
 import Row from "react-bootstrap/esm/Row";
-import Col from "react-bootstrap/esm/Col";
 
 
 
@@ -10,12 +9,10 @@ class Footer extends React.Component{
         return (
             <div>
                 <div>
-                    <h1>E-Store</h1>
-                        <Row>
-                            <Col>Início</Col>
-                            <Col>Sobre</Col>
-                            <Col>Fale Conosco</Col>
-                        </Row>
+                    <Row>
+                        <li>All Rights Reserved</li>
+                        <li>mais alguma outra informação que dê pra por no rodapé</li>
+                    </Row>
                 </div>
             </div>
         )
