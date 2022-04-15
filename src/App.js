@@ -1,5 +1,3 @@
-import logo from './logo.svg';
-import './App.css';
 // blibioteca adicionais
 import { useState } from "react";
 import Button from 'react-bootstrap/Button';
@@ -92,7 +90,7 @@ const ProdutoEdit = (props) => {
                   
                     <Col xs={6}>
                       <Row>
-                      <img src={logo} className="App-logo" alt="logo" />
+                        Segunda Coluna
                       </Row>
                     </Col>
                   
