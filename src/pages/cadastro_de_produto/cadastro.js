@@ -1,41 +1,38 @@
-// blibioteca adicionais
+//  Importações do Bootstrap
+import { Button, Col, Container, Form, Row, Stack } from 'react-bootstrap';
+
+//  Importações do React
 import { useState } from "react";
-import Button from 'react-bootstrap/Button';
-import { Col, Container, Row, Form, Stack } from 'react-bootstrap';
-import { useParams } from "react-router-dom";
-import { API, useProdutos } from '../src/compomente/Cadastro';
+
+//  Importações de Componentes
+import { API } from '../../components/BancoDeDados';
 
 
-const ProdutoEdit = (props) => {
-    /* const [codigo, setCodigo] = useState("") */
-    const [nome, setNome] = useState("")
-    const [preco, setPreco] = useState("")
-    const [inf, setInf] = useState("")
-    const [peso, setPeso] = useState("")
-    const [produtos, setProdutos] = API()
+const Cadastro = (props) => {
 
-  // Aqui pegamos o parametro. Observe que o nome da propriedade é o mesmo da definidada na rota.
-  let { id } = useParams();
+  const [id, setId] = useState("")
+  const [nome, setNome] = useState("")
+  const [preco, setPreco] = useState("")
+  const [inf, setInf] = useState("")
+  const [peso, setPeso] = useState("")
+  const [produtos, setProdutos] = API()
 
 
   const handlerSubmit = (event) => {
     event.preventDefault()
-    console.log(nome)
-    console.log(preco)
-    console.log(inf)
-    console.log(peso)
-
+    
     setProdutos([{
-      /* codigo, */
+      id,
       nome,
       preco,
       inf,
       peso
     }])
+
+    console.log(produtos);
   }
 
-  return (
-    <>
+  return <>
       <header>
         <Container>
           <Stack direction="horizontal">
@@ -104,7 +101,7 @@ const ProdutoEdit = (props) => {
                     <Button variant="primary" type="submit">
                       Salvar
                     </Button>{' '}
-                    <Button variant="primary" type='reset'>
+                    <Button variant="secondary" type='reset'>
                       Cancelar
                     </Button>
                   </div>
@@ -123,7 +120,6 @@ const ProdutoEdit = (props) => {
         </Container>
       </footer>
     </>
-  );
 }
 
-export default ProdutoEdit;
+export default Cadastro;
