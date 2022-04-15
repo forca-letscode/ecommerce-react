@@ -1,5 +1,5 @@
 //  Importações do Bootstrap
-import { Button, Col, Container, Form, Row, Stack } from 'react-bootstrap';
+import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 
 //  Importações do React
 import { useState } from "react";
@@ -10,7 +10,7 @@ import { API } from '../../components/BancoDeDados';
 
 const Cadastro = (props) => {
 
-  const [id, setId] = useState("")
+  // const [id, setId] = useState("")
   const [nome, setNome] = useState("")
   const [preco, setPreco] = useState("")
   const [inf, setInf] = useState("")
@@ -22,7 +22,7 @@ const Cadastro = (props) => {
     event.preventDefault()
     
     setProdutos([{
-      id,
+      // id,
       nome,
       preco,
       inf,
@@ -33,93 +33,73 @@ const Cadastro = (props) => {
   }
 
   return <>
-      <header>
+    <main>
+      <div className="App">
         <Container>
-          <Stack direction="horizontal">
-            <div className="bg-light border">LOGO</div>
-          </Stack>
+          <p>Pesquisa</p>
         </Container>
-      </header>
+      </div>
 
-
-      <main>
-        <div className="App">
-          <Container>
-            <p>Pesquisa</p>
-          </Container>
-        </div>
-
-        <div>
-          <Container>
-            <Form onSubmit={handlerSubmit}>
-              <fieldset>
-                <Row>
-                
-                    <Col xs={4}>
-                      <Row>
-                        <Form.Group className="mb-3">
-                            <Form.Label htmlFor="nome">Nome:</Form.Label>
-                            <Form.Control placeholder="Nome do produto" onChange={event => setNome(event.target.value)}/>
-                        </Form.Group>
-                      </Row>
-
-                      <Row>
-                        <Form.Group className="mb-3">
-                            <Form.Label htmlFor="preco">Preço:</Form.Label>
-                            <Form.Control type="number" placeholder="Preço do produto" onChange={event => setPreco(event.target.value)}/>
-                        </Form.Group>
-                      </Row>
-
-                      <Row>
-                        <Form.Group className="mb-3">
-                            <Form.Label htmlFor="inf">Informações/Descrição:</Form.Label>
-                            <Form.Control placeholder="Informação do produto" onChange={event => setInf(event.target.value)}/>
-                        </Form.Group>
-                      </Row>
-                    
-                      <Row>
-                        <Form.Group className="mb-3">
-                            <Form.Label htmlFor="peso">Peso:</Form.Label>
-                            <Form.Control type="number" placeholder="Peso do produto" onChange={event => setPeso(event.target.value)}/>
-                        </Form.Group>
-                      </Row>
-                    </Col>
-                  
-                    <Col xs={6}>
-                      <Row>
-                        Segunda Coluna
-                      </Row>
-                    </Col>
-                  
-                  
-                </Row>
-              </fieldset>
-
-              <fieldset>
-                <Row>
-                  <div className="App">
-                    <Button variant="primary" type="submit">
-                      Salvar
-                    </Button>{' '}
-                    <Button variant="secondary" type='reset'>
-                      Cancelar
-                    </Button>
-                  </div>
-                </Row>
-              </fieldset>
+      <div>
+        <Container>
+          <Form onSubmit={handlerSubmit}>
+            <fieldset>
+              <Row>
               
-            </Form>
-          </Container>
-        </div>
-      </main>
-      
+                <Col xs={4}>
+                  <Row>
+                    <Form.Group className="mb-3">
+                      <Form.Label htmlFor="nome">Nome:</Form.Label>
+                      <Form.Control placeholder="Nome do produto" onChange={event => setNome(event.target.value)}/>
+                    </Form.Group>
+                  </Row>
 
-      <footer className="App">
-        <Container>
-          <p>Roda pé</p>
+                  <Row>
+                    <Form.Group className="mb-3">
+                      <Form.Label htmlFor="preco">Preço:</Form.Label>
+                      <Form.Control type="number" placeholder="Preço do produto" onChange={event => setPreco(event.target.value)}/>
+                    </Form.Group>
+                  </Row>
+
+                  <Row>
+                    <Form.Group className="mb-3">
+                      <Form.Label htmlFor="inf">Informações/Descrição:</Form.Label>
+                      <Form.Control placeholder="Informação do produto" onChange={event => setInf(event.target.value)}/>
+                    </Form.Group>
+                  </Row>
+                
+                  <Row>
+                    <Form.Group className="mb-3">
+                      <Form.Label htmlFor="peso">Peso:</Form.Label>
+                      <Form.Control type="number" placeholder="Peso do produto" onChange={event => setPeso(event.target.value)}/>
+                    </Form.Group>
+                  </Row>
+                </Col>
+                
+                <Col xs={6}>
+                  <Row>
+                    Segunda Coluna
+                  </Row>
+                </Col>
+                
+              </Row>
+            </fieldset>
+
+            <fieldset>
+              <Row>
+                <div className="App">
+                  <Button variant="primary" type="submit">Salvar</Button>
+                  &emsp;
+                  <Button variant="secondary" type='reset'>Cancelar</Button>
+                </div>
+              </Row>
+            </fieldset>
+            
+          </Form>
         </Container>
-      </footer>
-    </>
+      </div>
+    </main>
+  </>
 }
 
 export default Cadastro;

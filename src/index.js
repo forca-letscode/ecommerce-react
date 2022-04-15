@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 //  Importação das páginas
 import Cadastro from './pages/cadastro_de_produto/cadastro';
+import { CabecalhoRodape } from './pages/templates/Default/index';
 
 //  Importação de Componentes
 import BancoDeDados from './components/BancoDeDados';
@@ -19,13 +20,15 @@ const root = createRoot(document.getElementById('root'))
 root.render(
   <BrowserRouter>
     <BancoDeDados>
+      <CabecalhoRodape>
     
         <Routes>
 
           <Route path="/" element={<Cadastro />} /> 
 
         </Routes>
-      
+        
+      </CabecalhoRodape>
     </BancoDeDados>
   </BrowserRouter>
 );
