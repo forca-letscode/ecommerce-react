@@ -34,12 +34,6 @@ const Cadastro = (props) => {
 
   return <>
     <main>
-      <div className="App">
-        <Container>
-          <p>Pesquisa</p>
-        </Container>
-      </div>
-
       <div>
         <Container>
           <Form onSubmit={handlerSubmit}>
@@ -87,10 +81,10 @@ const Cadastro = (props) => {
 
             <fieldset>
               <Row>
-                <div className="App">
-                  <Button variant="primary" type="submit">Salvar</Button>
+                <div className="Cadastro">
+                  <Button href='lista' variant="primary" type="submit">Salvar</Button>
                   &emsp;
-                  <Button variant="secondary" type='reset'>Cancelar</Button>
+                  <Button href='lista' variant="secondary" type='reset'>Cancelar</Button>
                 </div>
               </Row>
             </fieldset>

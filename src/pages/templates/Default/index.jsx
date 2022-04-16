@@ -23,8 +23,13 @@ export const CabecalhoRodape = (props) => {
 
     <footer>
       <Row>
-        <li>All Rights Reserved</li>
-        <li>mais alguma outra informação que dê pra por no rodapé</li>
+        <p>Contato</p>
+        {/* <ul> */}
+          <li>Endereço</li>
+          <li>Telefone</li>
+          <li>E-mail</li>
+        {/* </ul> */}
+        <p>All Rights Reserved</p>
       </Row>
     </footer>
   </>
