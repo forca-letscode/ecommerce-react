@@ -1,5 +1,5 @@
 //  Importações do Bootstrap
-import { Container, Stack } from "react-bootstrap";
+import { Container, Stack, Card } from "react-bootstrap";
 
 //  Importações do React
 import React from "react";
@@ -8,9 +8,10 @@ export const CabecalhoRodape = (props) => {
 
     return <>
         <header>
-        <Container>
-          <Stack direction="horizontal">
+        <Container fluid="md">
+          <Stack direction="horizontal" gap={2}>
             <div className="bg-light border">LOGO</div>
+            <div className="bg-light border">E-Store</div>
           </Stack>
         </Container>
       </header>
@@ -20,6 +21,10 @@ export const CabecalhoRodape = (props) => {
       <footer>
         <Container>
           <p>Roda pé</p>
+          <h1>Contato</h1>
+          <p>Endereço</p>
+          <p>Telefone</p>
+          <p>E-mail</p>
         </Container>
       </footer>
     </>

@@ -1,11 +1,15 @@
 //  Importações do Bootstrap
-import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { Button, Col, Container, Form, FormControl, Row, Stack } from 'react-bootstrap';
+
+import { Link } from 'react-router-dom';
 
 //  Importações do React
 import { useState } from "react";
 
 //  Importações de Componentes
 import { API } from '../../components/BancoDeDados';
+
+// import { Lista } from '../lista_de_produtos/lista';
 
 
 const Cadastro = (props) => {
@@ -34,9 +38,30 @@ const Cadastro = (props) => {
 
   return <>
     <main>
-      <div className="App">
-        <Container>
+      {/* <div className="Cadastro">
+        {/* <Container>
           <p>Pesquisa</p>
+        </Container> }
+        <Stack direction="horizontal" gap={2}>
+          <Button variant="primary" type="submit">Cadastrar produto</Button>
+          <div className="bg-light border ms-auto">Pesquisa</div>
+        </Stack>
+      </div> */}
+ 
+      <div className="Cadastro">
+        <Container>
+          <Stack direction="horizontal" gap={2}>
+            <Link className="col-md-6" to="../lista_de_produtos/lista">Cadastrar produto</Link>
+            <Form className="d-flex">
+              <FormControl
+                type="search"
+                placeholder="Pesquisa"
+                className="me-2"
+                aria-label="Pesquisa"
+              />
+              <Button variant="outline-success">Pesquisa</Button>
+            </Form>
+          </Stack>
         </Container>
       </div>
 
@@ -87,9 +112,10 @@ const Cadastro = (props) => {
 
             <fieldset>
               <Row>
-                <div className="App">
-                  <Button variant="primary" type="submit">Salvar</Button>
+                <div className="Cadastro">
+                  <Button href='lista' variant="primary" type="submit">Salvar</Button>
                   &emsp;
+                  {/* href='lista_de_produtos/lista */}
                   <Button variant="secondary" type='reset'>Cancelar</Button>
                 </div>
               </Row>
