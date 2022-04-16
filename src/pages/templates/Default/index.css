@@ -1,21 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:wght@700&family=Expletus+Sans&family=PT+Sans&family=Quicksand:wght@700&display=swap');
+
+:root {
+    /* paleta-de-cores */
+    --cor1: #042940;
+    --cor2: #005C53;
+    --cor3: #9FC131;
+    --cor4: #DBF227;
+    --cor5: #D6D58E;
+
+    --font-inicio:'Averia Libre', cursive;
+    --fonte-padrao: 'Quicksand', sans-serif;
+}
+
 header{
     margin-bottom: 1rem;
-    background-color: #042940;
+    background-color: var(--cor1);
     color: #FFF;
+    font-family: var(--font-padrao);
+    font-size: 1em;
+}
+
+header h1 {
+    font-family: var(--font-inicio);
+    font-size: 3.5em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.336);
+    /* text-align: center; */
+    /* padding: 20px; */
 }
 
 footer {
     display: flex;
     flex-direction: row;
     margin-top: 2rem;
-    background-color: #042940;
+    background-color: var(--cor1);
     color: #FFF;
+    font-family: var(--font-padrao);
+    font-size: 1em;
 }
-
-/* .paleta-de-cores {
-    color: #042940;
-    color: #005C53;
-    color: #9FC131;
-    color: #DBF227;
-    color: #D6D58E;
-} */
