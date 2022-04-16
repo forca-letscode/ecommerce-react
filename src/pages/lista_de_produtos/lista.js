@@ -1,6 +1,6 @@
 //  Importações do Bootstrap
 import { Button, Col, Container, Form, FormControl, Row, Stack } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 //  Importações do React
 import { useState } from "react";
@@ -24,7 +24,8 @@ const Lista = (props) => {
       <div className="Lista">
         <Container>
           <Stack direction="horizontal" gap={2}>
-            <Link className="col-md-6" to="../lista_de_produtos/lista">Cadastrar produto</Link>
+            {/* <Link className="col-md-6" to="../cadastro_de_produto/cadastro">Cadastrar produto</Link> */}
+            <Button href='/' variant="primary" type="submit">Cadastrar produto</Button>
             <Form className="d-flex">
               <FormControl
                 type="search"
