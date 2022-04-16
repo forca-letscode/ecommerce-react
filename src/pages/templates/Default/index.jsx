@@ -1,22 +1,25 @@
 //  Importações do Bootstrap
-import { Container, Stack, Card } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
+
+//  Importações de Estilos
+import './index.css';
 
 //  Importações do React
 import React from "react";
 
 export const CabecalhoRodape = (props) => {
 
-    return <>
-        <header>
-        <Container fluid="md">
-          <Stack direction="horizontal" gap={2}>
-            <div className="bg-light border">LOGO</div>
-            <div className="bg-light border">E-Store</div>
-          </Stack>
-        </Container>
-      </header>
+  return <>
+    <header>
+      <Row>
+        <h1>E-Store</h1>
+        <Col>Início</Col>
+        <Col>Sobre</Col>
+        <Col>Fale Conosco</Col>
+      </Row>
+    </header>
 
-      <main>{props.children}</main>
+    <main>{props.children}</main>
 
       <footer>
         <Container>
@@ -28,4 +31,15 @@ export const CabecalhoRodape = (props) => {
         </Container>
       </footer>
     </>
+    <footer>
+      <Row>
+        <li>All Rights Reserved</li>
+        <li>mais alguma outra informação que dê pra por no rodapé</li>
+        <h1>Contato</h1>
+        <p>Endereço</p>
+        <p>Telefone</p>
+        <p>E-mail</p>
+      </Row>
+    </footer>
+  </>
 }
