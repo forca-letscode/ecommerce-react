@@ -84,7 +84,6 @@ const Cadastro = (props) => {
                 <div className="Cadastro">
                   <Button href='lista' variant="primary" type="submit">Salvar</Button>
                   &emsp;
-                  {/* href='lista_de_produtos/lista */}
                   <Button href='lista' variant="secondary" type='reset'>Cancelar</Button>
                 </div>
               </Row>

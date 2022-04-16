@@ -1,30 +1,16 @@
 //  Importações do Bootstrap
-import { Button, Col, Container, Form, FormControl, Row, Stack } from 'react-bootstrap';
+import { Button, Form, FormControl, Stack, Row } from 'react-bootstrap';
+
 // import { Link } from 'react-router-dom';
-
-//  Importações do React
-import { useState } from "react";
-
-//  Importações de Componentes
-import { API } from '../../components/BancoDeDados';
 
 
 const Lista = (props) => {
 
-  // const [id, setId] = useState("")
-  const [nome, setNome] = useState("")
-  const [preco, setPreco] = useState("")
-  const [inf, setInf] = useState("")
-  const [peso, setPeso] = useState("")
-  const [produtos, setProdutos] = API()
-
-
   return <>
     <main>
       <div className="Lista">
-        <Container>
+        <Row>
           <Stack direction="horizontal" gap={2}>
-            {/* <Link className="col-md-6" to="../cadastro_de_produto/cadastro">Cadastrar produto</Link> */}
             <Button href='/' variant="primary" type="submit">Cadastrar produto</Button>
             <Form className="d-flex">
               <FormControl
@@ -36,7 +22,11 @@ const Lista = (props) => {
               <Button variant="outline-success">Pesquisa</Button>
             </Form>
           </Stack>
-        </Container>        
+        </Row> 
+
+        <Row>
+          <Button href='visualizacao' variant="primary" type="submit">Visualizar produto</Button>
+        </Row>       
       </div>
 
     </main>

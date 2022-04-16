@@ -21,24 +21,15 @@ export const CabecalhoRodape = (props) => {
 
     <main>{props.children}</main>
 
-      <footer>
-        <Container>
-          <p>Roda pé</p>
-          <h1>Contato</h1>
-          <p>Endereço</p>
-          <p>Telefone</p>
-          <p>E-mail</p>
-        </Container>
-      </footer>
-    </>
     <footer>
       <Row>
-        <li>All Rights Reserved</li>
-        <li>mais alguma outra informação que dê pra por no rodapé</li>
-        <h1>Contato</h1>
-        <p>Endereço</p>
-        <p>Telefone</p>
-        <p>E-mail</p>
+        <p>Contato</p>
+        {/* <ul> */}
+          <li>Endereço</li>
+          <li>Telefone</li>
+          <li>E-mail</li>
+        {/* </ul> */}
+        <p>All Rights Reserved</p>
       </Row>
     </footer>
   </>
