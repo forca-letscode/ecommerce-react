@@ -1,5 +1,21 @@
-header {
+header{
+    margin-bottom: 1rem;
+    background-color: #042940;
+    color: #FFF;
+}
+
+footer {
     display: flex;
     flex-direction: row;
-    color: rgb(18, 24, 18);
+    margin-top: 2rem;
+    background-color: #042940;
+    color: #FFF;
 }
+
+/* .paleta-de-cores {
+    color: #042940;
+    color: #005C53;
+    color: #9FC131;
+    color: #DBF227;
+    color: #D6D58E;
+} */
