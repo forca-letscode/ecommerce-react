@@ -19,7 +19,7 @@ const Lista = (props) => {
                 className="me-2"
                 aria-label="Pesquisa"
               />
-              <Button variant="outline-success">Pesquisa</Button>
+              <Button type="submit" variant="outline-light">&#128269;</Button>
             </Form>
           </Stack>
         </Row> 
