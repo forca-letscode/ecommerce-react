@@ -16,17 +16,17 @@
 
 A tela deve ser composta de:
 
-- [ ] Cabeçalho (padrão toda aplicação);
-- [ ] Rodapé (padrão toda aplicação);
+- [X] Cabeçalho (padrão toda aplicação);
+- [X] Rodapé (padrão toda aplicação);
 - [ ] Deve conter os seguintes campos:
-	- [ ] Título (campo de texto curto)
-	- [ ] Preço (campo numérico com a máscara padrão da moeda brasileira)
-	- [ ] Informações / Descrições (campo de texto longo)
-	- [ ] Peso (campo numérico)
+	- [X] Título (campo de texto curto)
+	- [X] Preço (campo numérico com a máscara padrão da moeda brasileira)
+	- [X] Informações / Descrições (campo de texto longo)
+	- [X] Peso (campo numérico)
 	- [ ] Campo para upload de imagens `(se conseguir fazer)`
-- [ ] Botão Salvar
+- [X] Botão Salvar
 	- [ ] Realiza o salvamento e redireciona o usuário para a tela de listagem de produtos
-- [ ] Botão Cancelar
+- [X] Botão Cancelar
 	- [ ] Cancela a edição e retorna o usuário para a listagem de produtos
 
 ### Tela de listagem de produto
@@ -35,19 +35,19 @@ A tela deve ser composta de:
 
 A tela deve ser composta de:
 
- - [ ] Cabeçalho (padrão toda aplicação);
- - [ ] Rodapé (padrão toda aplicação);
- - [ ] Botão de Cadastrar Produto;
-	 - [ ] Leva a tela de cadastro de produto (mesma de edição)
-- [ ] Campo de busca (campo de texto curto)
+ - [X] Cabeçalho (padrão toda aplicação);
+ - [X] Rodapé (padrão toda aplicação);
+ - [X] Botão de Cadastrar Produto;
+	 - [X] Leva a tela de cadastro de produto (mesma de edição)
+- [X] Campo de busca (campo de texto curto)
 	- [ ] Realiza a filtragem dos produtos;
 	- [ ] Realiza a pesquisa pelo título do produto.
-- [ ]  Terá uma listagem de produtos.
-	- [ ] Botão de excluir
+- [X]  Terá uma listagem de produtos.
+	- [X] Botão de excluir
 		- [ ] Remove o produto
-	- [ ] Botão de editar
+	- [X] Botão de editar
 		- [ ] Abre a tela de edição do produto
-	- [ ] Título do produto
+	- [X] Título do produto
 	- [ ] Ao clicar no produto será aberta uma tela de visualização
 
 ### Tela de visualização de produto
@@ -56,8 +56,8 @@ A tela deve ser composta de:
 
 A tela deve ser composta de:
 
- - [ ] Cabeçalho (padrão toda aplicação);
- - [ ] Rodapé (padrão toda aplicação);
+ - [X] Cabeçalho (padrão toda aplicação);
+ - [X] Rodapé (padrão toda aplicação);
  - [ ] Nela serão exibidas as informações:
 	 - [ ] Título
 	 - [ ] Foto
