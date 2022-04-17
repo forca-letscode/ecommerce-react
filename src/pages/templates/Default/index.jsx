@@ -1,5 +1,5 @@
 //  Importações do Bootstrap
-import { Navbar, Nav, Row, Col, Image } from "react-bootstrap";
+import { Navbar, Nav, Row, Col, Stack } from "react-bootstrap";
 
 import { Link } from 'react-router-dom';
 
@@ -14,11 +14,12 @@ export const CabecalhoRodape = (props) => {
   return <>
     <header>
       <Row>
-        <Col>
+        <Col md={10}>
           <h1>E-Store</h1>
         </Col>
-        <Col>
+        <Col md={2}>
           <p>Bem-vindo(a)</p>
+          <Link to="">Entre ou cadastra-se</Link>
           {/* <Link href="">Entre ou cadastra-se</Link> */}
         </Col>
       </Row>
@@ -39,8 +40,8 @@ export const CabecalhoRodape = (props) => {
     <footer>
       <Row>
         <Col>
-          <Navbar>
-            <Nav>
+          <Navbar> 
+            <Nav className="md-auto">
               <Nav.Link href="">Trabalhe conosco</Nav.Link>
               <Nav.Link href="">Termos e condições</Nav.Link>
               <Nav.Link href="">Como cuidamos da sua privacidade</Nav.Link>
@@ -48,34 +49,27 @@ export const CabecalhoRodape = (props) => {
             </Nav>
           </Navbar>
         </Col>
-        <Col>
+        <Col md={2}>
           <p>All Rights Reserved</p>
         </Col>
 
       </Row>
       <Row>
-        <Col>
-          {/* <img height="20px" src="icons8-endereço-50.png" /> */}
-          {/* <img src="/icons8-endereço-50.png" alt="..." /> */}
-          {/* <a href="https://icons8.com/icon/ngwSALX7bAP3/endereço">Endereço icon by Icons8</a> */}
-          Endereço
-        </Col>
-        <Col>
-          <p>
-            {/* <Figure.Image width={171} height={180} alt="171x180" src="img/icone-telefone.png" /> */}
+        <Stack direction="horizontal" gap={3}>
+          <div>
+            <img src="https://img.icons8.com/ios/25/ffffff/address--v1.png"/>
+            Endereço
+          </div>
+          <div>
+            <img src="https://img.icons8.com/external-nawicon-detailed-outline-nawicon/25/ffffff/external-telephone-communication-nawicon-detailed-outline-nawicon.png"/>
             Telefone
-          </p>
-        </Col>
-        <Col>
-          <p>
-            {/* <Figure.Image width={171} height={180} alt="171x180" src="../../img/icone-email.png" /> */}
+          </div>
+          <div>
+            <img src="https://img.icons8.com/ios/25/ffffff/new-post.png"/>
             E-mail
-          </p>
-        </Col>
+          </div>
+        </Stack>
       </Row>
-      {/* <Row>
-       <p>All Rights Reserved</p>
-      </Row> */}
     </footer>
   </>
 }

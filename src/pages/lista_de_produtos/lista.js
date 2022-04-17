@@ -31,7 +31,7 @@ const Lista = (props) => {
           {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
           <Card.Body>
             <Card.Title>Título</Card.Title>
-            <Card.Link href="visualizacao"><Card.Img variant="top" src="img/logo.svg" /></Card.Link>
+            <Card.Link href="visualizacao"><Card.Img variant="top" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/30/000000/external-smartphone-digital-nomading-relocation-flaticons-lineal-color-flat-icons.png" /></Card.Link>
             {/* src="holder.js/100px180" */}
             {/* colocar título como link p/ redirecionar p/ tela de visualização */}
             <Button href='/' variant="outline-primary" type="submit">Editar</Button>
