@@ -17,10 +17,11 @@ const Lista = (props) => {
                 type="search"
                 placeholder="Pesquisa"
                 className="me-2"
-                aria-label="Pesquisa"
+                aria-label="Search"
               />
               <Button type="submit" variant="outline-light">&#128269;</Button>
             </Form>
+
           </Stack>
         </Row> 
 
