@@ -48,7 +48,7 @@ A tela deve ser composta de:
 	- [X] Botão de editar
 		- [ ] Abre a tela de edição do produto
 	- [X] Título do produto
-	- [ ] Ao clicar no produto será aberta uma tela de visualização
+	- [X] Ao clicar no produto será aberta uma tela de visualização
 
 ### Tela de visualização de produto
 
