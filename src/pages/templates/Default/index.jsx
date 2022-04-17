@@ -20,7 +20,6 @@ export const CabecalhoRodape = (props) => {
         <Col md={2}>
           <p>Bem-vindo(a)</p>
           <Link to="">Entre ou cadastra-se</Link>
-          {/* <Link href="">Entre ou cadastra-se</Link> */}
         </Col>
       </Row>
       <Row>
@@ -40,7 +39,7 @@ export const CabecalhoRodape = (props) => {
     <footer>
       <Row>
         <Col>
-          <Navbar> 
+          <Navbar variant="dark"> 
             <Nav className="md-auto">
               <Nav.Link href="">Trabalhe conosco</Nav.Link>
               <Nav.Link href="">Termos e condições</Nav.Link>
@@ -58,15 +57,15 @@ export const CabecalhoRodape = (props) => {
         <Stack direction="horizontal" gap={3}>
           <div>
             <img src="https://img.icons8.com/ios/25/ffffff/address--v1.png"/>
-            Endereço
+            &emsp;Endereço
           </div>
           <div>
             <img src="https://img.icons8.com/external-nawicon-detailed-outline-nawicon/25/ffffff/external-telephone-communication-nawicon-detailed-outline-nawicon.png"/>
-            Telefone
+            &emsp;Telefone
           </div>
           <div>
             <img src="https://img.icons8.com/ios/25/ffffff/new-post.png"/>
-            E-mail
+            &emsp;E-mail
           </div>
         </Stack>
       </Row>
