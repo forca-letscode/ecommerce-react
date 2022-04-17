@@ -1,5 +1,7 @@
 //  Importações do Bootstrap
-import { Navbar, Nav, Row } from "react-bootstrap";
+import { Navbar, Nav, Row, Col, Stack } from "react-bootstrap";
+
+import { Link } from 'react-router-dom';
 
 //  Importações de Estilos
 import './index.css';
@@ -12,7 +14,14 @@ export const CabecalhoRodape = (props) => {
   return <>
     <header>
       <Row>
-        <h1>E-Store</h1>
+        <Col md={10}>
+          <h1>E-Store</h1>
+        </Col>
+        <Col md={2}>
+          <p>Bem-vindo(a)</p>
+          <Link to="">Entre ou cadastra-se</Link>
+          {/* <Link href="">Entre ou cadastra-se</Link> */}
+        </Col>
       </Row>
       <Row>
         <Navbar variant="dark">
@@ -30,13 +39,36 @@ export const CabecalhoRodape = (props) => {
 
     <footer>
       <Row>
-        <p>Contato</p>
-        {/* <ul> */}
-          <li>Endereço</li>
-          <li>Telefone</li>
-          <li>E-mail</li>
-        {/* </ul> */}
-        <p>All Rights Reserved</p>
+        <Col>
+          <Navbar> 
+            <Nav className="md-auto">
+              <Nav.Link href="">Trabalhe conosco</Nav.Link>
+              <Nav.Link href="">Termos e condições</Nav.Link>
+              <Nav.Link href="">Como cuidamos da sua privacidade</Nav.Link>
+              <Nav.Link href="">Contato</Nav.Link>
+            </Nav>
+          </Navbar>
+        </Col>
+        <Col md={2}>
+          <p>All Rights Reserved</p>
+        </Col>
+
+      </Row>
+      <Row>
+        <Stack direction="horizontal" gap={3}>
+          <div>
+            <img src="https://img.icons8.com/ios/25/ffffff/address--v1.png"/>
+            Endereço
+          </div>
+          <div>
+            <img src="https://img.icons8.com/external-nawicon-detailed-outline-nawicon/25/ffffff/external-telephone-communication-nawicon-detailed-outline-nawicon.png"/>
+            Telefone
+          </div>
+          <div>
+            <img src="https://img.icons8.com/ios/25/ffffff/new-post.png"/>
+            E-mail
+          </div>
+        </Stack>
       </Row>
     </footer>
   </>
