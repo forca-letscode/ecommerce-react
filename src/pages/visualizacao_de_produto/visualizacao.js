@@ -1,19 +1,44 @@
 //  Importações do Bootstrap
-import { Container, Button } from 'react-bootstrap';
+import { Container, Form, Row, Col } from 'react-bootstrap';
 
 const Visualiza = (props) => {
 
     return <>
       <main>
         <div className="Visualiza">
-            <Container>
-                <p>Página de visualização de produto [em elaboração]</p>
-                <Button href='/' variant="primary" type="submit">Página de cadastro</Button>
-                <Button href='lista' variant="primary" type="submit">Página de listagem</Button>
-            </Container>       
+          <Container>
+            <Form>
+              <fieldset>
+                <Row>
+
+                  <Col xs={6}>
+                    <Row>
+                      <Form.Label htmlFor="nome">Nome</Form.Label>
+                      <p>FOTO</p>
+                    </Row>
+                  </Col>
+                
+                  <Col xs={4}>
+                    <Row>
+                      <Form.Label htmlFor="preco">Preço</Form.Label>
+                    </Row>
+
+                    <Row>
+                      <Form.Label htmlFor="inf">Informações/Descrição</Form.Label>
+                    </Row>
+                  
+                    <Row>
+                      <Form.Label htmlFor="peso">Peso</Form.Label>
+                    </Row>
+
+                  </Col>
+                </Row>
+              </fieldset>
+            </Form>
+          </Container>
         </div>
       </main>
     </>
 }
   
-  export default Visualiza;
+export default Visualiza;
