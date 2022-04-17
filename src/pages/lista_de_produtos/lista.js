@@ -33,6 +33,8 @@ const Lista = (props) => {
           {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
           <Card.Body>
             <Card.Title>Título</Card.Title>
+            <Card.Link href="visualizacao"><Card.Img variant="top" src="img/logo.svg" /></Card.Link>
+            {/* src="holder.js/100px180" */}
             {/* colocar título como link p/ redirecionar p/ tela de visualização */}
             <Button href='/' variant="outline-primary" type="submit">Editar</Button>
             <Button variant="outline-dark" type="reset">Excluir</Button>
