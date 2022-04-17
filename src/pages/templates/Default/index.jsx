@@ -24,10 +24,8 @@ export const CabecalhoRodape = (props) => {
       <Row>
         <Navbar variant="dark">
           <Nav className="md-auto">
-            <Nav.Link href="">Início</Nav.Link>
-            <Nav.Link href="lista">Lista de Produtos</Nav.Link>
             <Nav.Link href="/">Cadastrar Produto</Nav.Link>
-            <Nav.Link href="">Fale Conosco</Nav.Link>
+            <Nav.Link href="lista">Lista de Produtos</Nav.Link>
           </Nav>
         </Navbar>
       </Row>
