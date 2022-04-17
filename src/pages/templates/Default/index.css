@@ -12,7 +12,7 @@
 
 
 :root {
-    /* paleta-de-cores */
+    /* paleta de cores */
     --cor1: #042940;
     --cor2: #005C53;
     --cor3: #9FC131;
@@ -27,7 +27,7 @@
     --font-3: 'Quicksand', sans-serif;
 }
 
-header{
+header {
     margin-bottom: 1rem;
     background-color: var(--cor1);
     color: #FFF;
@@ -40,12 +40,6 @@ header h1 {
     font-family: var(--font-titulo);
     font-size: 3.5em;
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
-}
-
-Link {
-    font-family: var(--font-padrao);
-    font-size: 1.2em;
-    color: #FFF;
 }
 
 footer {

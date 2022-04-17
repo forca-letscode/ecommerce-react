@@ -15,7 +15,7 @@ export const CabecalhoRodape = (props) => {
         <h1>E-Store</h1>
       </Row>
       <Row>
-        <Navbar>
+        <Navbar variant="dark">
           <Nav className="md-auto">
             <Nav.Link href="">Início</Nav.Link>
             <Nav.Link href="lista">Lista de Produtos</Nav.Link>
