@@ -28,7 +28,7 @@
 }
 
 header{
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
     background-color: var(--cor1);
     color: #FFF;
     font-family: var(--font-padrao);
@@ -49,12 +49,12 @@ Link {
 }
 
 footer {
-    display: flex;
-    flex-direction: row;
-    margin-top: 2rem;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* margin-top: 2rem; */
     background-color: var(--cor1);
     color: #FFF;
     font-family: var(--font-padrao2);
-    font-size: 1em;
+    font-size: 0.8em;
     padding: 5px 20px;
 }

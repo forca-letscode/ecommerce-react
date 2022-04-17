@@ -1,8 +1,6 @@
 //  Importações do Bootstrap
 import { Button, Form, FormControl, Stack, Row, Card } from 'react-bootstrap';
 
-// import { Link } from 'react-router-dom';
-
 
 const Lista = (props) => {
 
