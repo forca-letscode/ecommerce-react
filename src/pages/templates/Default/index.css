@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:wght@700&family=Expletus+Sans&family=PT+Sans&family=Quicksand:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:wght@700&family=Expletus+Sans&family=PT+Sans&family=Quicksand:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&display=swap');
+
 
 :root {
     /* paleta-de-cores */
@@ -10,8 +17,11 @@
     --cor4: #DBF227;
     --cor5: #D6D58E;
 
-    --font-inicio:'Averia Libre', cursive;
-    --fonte-padrao: 'Quicksand', sans-serif;
+    --font-titulo: 'Aclonica', sans-serif;
+    --font-padrao: 'League Spartan', sans-serif; 
+    --font-1: 'Averia Libre', cursive;
+    --font-2: 'Allerta Stencil', sans-serif;
+    --font-3: 'Quicksand', sans-serif;
 }
 
 header{
@@ -19,11 +29,11 @@ header{
     background-color: var(--cor1);
     color: #FFF;
     font-family: var(--font-padrao);
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 header h1 {
-    font-family: var(--font-inicio);
+    font-family: var(--font-titulo);
     font-size: 3.5em;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.336);
     /* text-align: center; */
