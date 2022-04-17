@@ -1,13 +1,12 @@
 //  Importações do Bootstrap
 import { Navbar, Nav, Row, Col, Stack } from "react-bootstrap";
 
-import { Link } from 'react-router-dom';
-
 //  Importações de Estilos
 import './index.css';
 
 //  Importações do React
 import React from "react";
+import { Link } from 'react-router-dom';
 
 export const CabecalhoRodape = (props) => {
 
@@ -19,7 +18,7 @@ export const CabecalhoRodape = (props) => {
         </Col>
         <Col md={2}>
           <p>Bem-vindo(a)</p>
-          <Link to="">Entre ou cadastra-se</Link>
+          <Link to="">Entre ou cadastre-se</Link>
         </Col>
       </Row>
       <Row>
@@ -56,15 +55,15 @@ export const CabecalhoRodape = (props) => {
       <Row>
         <Stack direction="horizontal" gap={3}>
           <div>
-            <img src="https://img.icons8.com/ios/25/ffffff/address--v1.png"/>
+            <img src="https://img.icons8.com/ios/25/ffffff/address--v1.png" alt="Endereço"/>
             &emsp;Endereço
           </div>
           <div>
-            <img src="https://img.icons8.com/external-nawicon-detailed-outline-nawicon/25/ffffff/external-telephone-communication-nawicon-detailed-outline-nawicon.png"/>
+            <img src="https://img.icons8.com/external-nawicon-detailed-outline-nawicon/25/ffffff/external-telephone-communication-nawicon-detailed-outline-nawicon.png" alt="Telefone"/>
             &emsp;Telefone
           </div>
           <div>
-            <img src="https://img.icons8.com/ios/25/ffffff/new-post.png"/>
+            <img src="https://img.icons8.com/ios/25/ffffff/new-post.png" alt="Email"/>
             &emsp;E-mail
           </div>
         </Stack>
