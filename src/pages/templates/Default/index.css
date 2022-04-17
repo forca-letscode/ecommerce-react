@@ -8,6 +8,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Murecho:wght@300&display=swap');
+
 
 :root {
     /* paleta-de-cores */
@@ -18,7 +20,8 @@
     --cor5: #D6D58E;
 
     --font-titulo: 'Aclonica', sans-serif;
-    --font-padrao: 'League Spartan', sans-serif; 
+    --font-padrao: 'League Spartan', sans-serif;
+    --font-padrao2: 'Murecho', sans-serif;
     --font-1: 'Averia Libre', cursive;
     --font-2: 'Allerta Stencil', sans-serif;
     --font-3: 'Quicksand', sans-serif;
@@ -46,6 +49,6 @@ footer {
     margin-top: 2rem;
     background-color: var(--cor1);
     color: #FFF;
-    font-family: var(--font-padrao);
+    font-family: var(--font-padrao2);
     font-size: 1em;
 }
