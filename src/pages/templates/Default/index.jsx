@@ -1,5 +1,5 @@
 //  Importações do Bootstrap
-import { Col, Row, Stack } from "react-bootstrap";
+import { Navbar, Nav, Row } from "react-bootstrap";
 
 //  Importações de Estilos
 import './index.css';
@@ -11,16 +11,19 @@ export const CabecalhoRodape = (props) => {
 
   return <>
     <header>
-      <Stack direction="horizontal">
-        <Row>
-          <h1>E-Store</h1>
-          <Col md="auto">Início</Col>
-          <Col md="auto">Lista de Produtos</Col>
-          <Col md="auto">Cadastrar Produto</Col>
-          <Col md="auto">Sobre</Col>
-          <Col md="auto">Fale Conosco</Col>
-        </Row>
-      </Stack>
+      <Row>
+        <h1>E-Store</h1>
+      </Row>
+      <Row>
+        <Navbar>
+          <Nav className="md-auto">
+            <Nav.Link href="">Início</Nav.Link>
+            <Nav.Link href="lista">Lista de Produtos</Nav.Link>
+            <Nav.Link href="/">Cadastrar Produto</Nav.Link>
+            <Nav.Link href="">Fale Conosco</Nav.Link>
+          </Nav>
+        </Navbar>
+      </Row>
     </header>
 
     <main>{props.children}</main>

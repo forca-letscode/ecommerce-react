@@ -33,14 +33,19 @@ header{
     color: #FFF;
     font-family: var(--font-padrao);
     font-size: 1.2em;
+    padding: 10px 20px;
 }
 
 header h1 {
     font-family: var(--font-titulo);
     font-size: 3.5em;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.336);
-    /* text-align: center; */
-    /* padding: 20px; */
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+Link {
+    font-family: var(--font-padrao);
+    font-size: 1.2em;
+    color: #FFF;
 }
 
 footer {
@@ -51,4 +56,5 @@ footer {
     color: #FFF;
     font-family: var(--font-padrao2);
     font-size: 1em;
+    padding: 5px 20px;
 }
