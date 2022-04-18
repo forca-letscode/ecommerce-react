@@ -2,7 +2,7 @@
 import { Button, Card } from 'react-bootstrap';
 
 //  Importação do React
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function CriarCardProduto(produto) {
 
@@ -13,7 +13,7 @@ export default function CriarCardProduto(produto) {
             </Link>
             <Card.Body>
                 <Card.Title>{produto.nome}</Card.Title>
-                <Button type='submit' variant="success" size='sm'>Editar</Button>
+                <Button type='submit' onClick = { o => navigate(`/$produto.id)`} variant="success" size='sm'>Editar</Button>
                 <Button type='button' variant="outline-danger" className='float-end' size='sm'>Excluir</Button>
             </Card.Body>
         </Card>
