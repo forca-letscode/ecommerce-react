@@ -3,20 +3,27 @@ import { Button, Col, Container, Form, FormControl, Stack, Row } from 'react-boo
 
 //  Importação de Componentes
 import CardProduto from '../../components/ProdutoCard';
+import { Link } from 'react-router-dom';
+import { API } from '../../components/BancoDeDados';
 
 const teste = { nome: "Nome do produto" };
 
 //  TODO: Substituir o array abaixo pelo banco de dados
-const produtos = Array(10).fill(teste);
+const produtos = Array(3).fill(teste);
 
 const Lista = (props) => {
 
+  const [produtos, setProdutos] = API()
+  console.log(produtos)
   return <>
     <main>
       <Container>
         <Row>
           <Stack direction="horizontal" gap={2}>
-            <Button href='/' variant="primary" type="button">Cadastrar produto</Button>
+            {/* <Button  variant="primary" type="button">Cadastrar produto</Button> */}
+            <Link to='/'>Cadastrar produto</Link>
+
+
             <Form className="d-flex" >
               <FormControl
                 type="search"

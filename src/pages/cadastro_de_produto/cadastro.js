@@ -1,35 +1,34 @@
 //  Importações do Bootstrap
-import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { Button, Col, Container, Form, Row, Table } from 'react-bootstrap';
 
 //  Importações do React
 import { useState } from "react";
 
 //  Importações de Componentes
 import { API } from '../../components/BancoDeDados';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 
 const Cadastro = (props) => {
 
-  // const [id, setId] = useState("")
+  
   const [nome, setNome] = useState("")
   const [preco, setPreco] = useState("")
   const [inf, setInf] = useState("")
   const [peso, setPeso] = useState("")
   const [produtos, setProdutos] = API()
-
-
+  const navigate = useNavigate()
+  const {id} = useParams()
+  console.log(id)
+  
   const handlerSubmit = (event) => {
     event.preventDefault()
-    
-    setProdutos([{
-      // id,
-      nome,
-      preco,
-      inf,
-      peso
-    }])
-
-    console.log(produtos);
+    console.log(produtos)
+    const lista = {id:produtos.length + 1, nome, preco, inf, peso}
+    setProdutos([...produtos, lista])
+    console.log('Lista', lista);
+    navigate('/Lista')
+    console.log('Produto', produtos);
   }
 
   return <>
@@ -38,7 +37,7 @@ const Cadastro = (props) => {
         <Container>
           <Form onSubmit={handlerSubmit}>
             <fieldset>
-              <Row>
+              <Row >
               
                 <Col xs={4}>
                   <Row>
@@ -58,7 +57,7 @@ const Cadastro = (props) => {
                   <Row>
                     <Form.Group className="mb-3">
                       <Form.Label htmlFor="inf">Informações/Descrição:</Form.Label>
-                      <Form.Control placeholder="Informação do produto" onChange={event => setInf(event.target.value)}/>
+                      <Form.Control placeholder="Informação do produto" onChange={event => setInf(event.target.value)} as="textarea" rows={3}/>
                     </Form.Group>
                   </Row>
                 
@@ -82,9 +81,11 @@ const Cadastro = (props) => {
             <fieldset>
               <Row>
                 <div className="Cadastro">
-                  <Button href='lista' variant="primary" type="submit">Salvar</Button>
+                  <Button  variant="primary" type="submit">Salvar</Button>
+                  {/* <Link to='/Lista'>Salvar</Link> */}
                   &emsp;
-                  <Button href='lista' variant="secondary" type='reset'>Cancelar</Button>
+                  {/* <Button  variant="secondary" type='reset'>Cancelar</Button> */}
+                  <Link to='/Lista'>Cancelar</Link>
                 </div>
               </Row>
             </fieldset>
@@ -92,7 +93,34 @@ const Cadastro = (props) => {
           </Form>
         </Container>
       </div>
+
+      <div>
+        <Table striped bordered hover>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Nome:</th>
+              <th>Preço</th>
+              <th>Informação</th>
+              <th>Peso</th>
+            </tr>
+          </thead>
+          <tbody>
+            {produtos.map((produt) => (
+            <tr key = {produt.id}>
+              <td>{produt.id}</td>
+              <td>{produt.nome}</td>
+              <td>{produt.preco}</td>
+              <td>{produt.inf}</td>
+              <td>{produt.peso}</td>
+            </tr>))}
+          </tbody>
+        </Table>
+      </div>
+
     </main>
+
+    
   </>
 }
 

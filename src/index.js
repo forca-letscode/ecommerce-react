@@ -26,7 +26,8 @@ root.render(
     
         <Routes>
 
-          <Route path="/" element={<Cadastro />} /> 
+          <Route path="/" element={<Cadastro />} />
+          <Route path="/:id" element={<Cadastro />} /> 
           <Route path="/lista" element={<Lista />} />
           <Route path="/visualizacao" element={<Visualiza />} />
           <Route path="/visualizacao/:id" element={<Visualiza />} />
