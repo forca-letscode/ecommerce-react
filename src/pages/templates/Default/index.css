@@ -30,16 +30,47 @@
 header{
     margin-bottom: 1rem;
     background-color: var(--cor1);
-    color: #FFF;
-    font-family: var(--font-padrao);
-    font-size: 1.2em;
+    /* color: #FFF; */
+    /* font-family: var(--font-padrao); */
+    /* font-size: 1.2em; */
     padding: 10px 20px;
 }
 
 header h1 {
     font-family: var(--font-titulo);
-    font-size: 3.5em;
+    font-size: 3em;
+    color: #FFF;
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    text-align: center;
+}
+
+header h1:hover {
+    color: var(--cor3);
+}
+
+.bemVindo {
+    color: #FFF;
+    font-family: var(--font-padrao2);
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.menu a {
+    font-family: var(--font-padrao);
+    font-size: 1.2em;
+    background-color: var(--cor1);
+    color: #FFF;
+}
+
+/* Col {
+    padding: 0px;
+    margin: 0px;
+} */
+
+.menu a:hover {
+    text-decoration: underline;
+    background-color: var(--cor2);
+    border-radius: 20px;
 }
 
 footer {

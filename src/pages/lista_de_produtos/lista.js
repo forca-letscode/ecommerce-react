@@ -24,7 +24,8 @@ const Lista = (props) => {
                 className="me-2"
                 aria-label="Search"
               />
-              <Button type="submit" variant="outline-light">&#128269;</Button>
+              {/* <Button type="submit" variant="outline-light">&#128269;</Button> */}
+              <Button type="submit" variant="outline-light"><img src="https://img.icons8.com/pastel-glyph/25/000000/search--v3.png"/></Button>
             </Form>
           </Stack>
         </Row>
