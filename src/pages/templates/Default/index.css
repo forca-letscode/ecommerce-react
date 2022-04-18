@@ -55,6 +55,10 @@ header h1:hover {
     text-decoration: none;
 }
 
+.menu {
+    justify-content: center;
+}
+
 .menu a {
     font-family: var(--font-padrao);
     font-size: 1.2em;

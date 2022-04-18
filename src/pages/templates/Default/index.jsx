@@ -1,5 +1,5 @@
 //  Importações do Bootstrap
-import { Navbar, Nav, NavDropdown, Row, Col, Stack } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown, Row, Col, Stack, Container } from "react-bootstrap";
 
 //  Importações de Estilos
 import './index.css';
@@ -21,9 +21,10 @@ export const CabecalhoRodape = (props) => {
           <Link className="bemVindo" to="">Entre ou cadastre-se</Link>
         </Col>
       </Row>
-
-      <Row className="menu">
-        <Col md={1}>
+      
+      <div className="menu">
+        <Row>
+          <Col md={1}>
             <NavDropdown title="Vendedor" id="navbarScrollingDropdown">
               <NavDropdown.Item href="/">Cadastrar Produto</NavDropdown.Item>
               <NavDropdown.Item href="lista">Lista de Produtos</NavDropdown.Item>
@@ -32,23 +33,24 @@ export const CabecalhoRodape = (props) => {
                 Entrar
               </NavDropdown.Item>
             </NavDropdown>
-        </Col>
-        <Col md={9}>
-          <Navbar variant="dark">
-            <Nav className="md-auto"> 
-              <Nav.Link href="">Eletrodomésticos</Nav.Link>
-              <Nav.Link href="">Informática</Nav.Link>
-              <Nav.Link href="">Móveis e Decoração</Nav.Link>
-              <Nav.Link href="">Vestuário</Nav.Link>
-              <Nav.Link href="">Cosméticos</Nav.Link>
-            </Nav>
-          </Navbar>
-        </Col>
-        <Col md={2}>
-          {/* <Link to=""><img src="https://img.icons8.com/ios/35/ffffff/shopping-bag--v1.png"/></Link> */}
-          <Link to=""><img src="https://img.icons8.com/ios/35/ffffff/shopping-cart.png"/></Link>
-        </Col>
-      </Row>
+          </Col>
+          <Col md={9}>
+            <Navbar variant="dark">
+              <Nav className="md-auto"> 
+                <Nav.Link href="">Eletrodomésticos</Nav.Link>
+                <Nav.Link href="">Informática</Nav.Link>
+                <Nav.Link href="">Móveis e Decoração</Nav.Link>
+                <Nav.Link href="">Vestuário</Nav.Link>
+                <Nav.Link href="">Cosméticos</Nav.Link>
+              </Nav>
+            </Navbar>
+          </Col>
+          <Col md={2}>
+            {/* <Link to=""><img src="https://img.icons8.com/ios/35/ffffff/shopping-bag--v1.png"/></Link> */}
+            <Link to=""><img src="https://img.icons8.com/ios/35/ffffff/shopping-cart.png"/></Link>
+          </Col>
+        </Row>
+      </div>
     </header>
 
     <main>{props.children}</main>
