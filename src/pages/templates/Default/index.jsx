@@ -1,5 +1,5 @@
 //  Importações do Bootstrap
-import { Navbar, Nav, NavDropdown, Row, Col, Stack, Container } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown, Row, Col, Stack } from "react-bootstrap";
 
 //  Importações de Estilos
 import './index.css';
@@ -29,9 +29,7 @@ export const CabecalhoRodape = (props) => {
               <NavDropdown.Item href="/">Cadastrar Produto</NavDropdown.Item>
               <NavDropdown.Item href="lista">Lista de Produtos</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Entrar
-              </NavDropdown.Item>
+              <NavDropdown.Item href="#action5">Entrar</NavDropdown.Item>
             </NavDropdown>
           </Col>
           <Col md={9}>
@@ -46,8 +44,7 @@ export const CabecalhoRodape = (props) => {
             </Navbar>
           </Col>
           <Col md={2}>
-            {/* <Link to=""><img src="https://img.icons8.com/ios/35/ffffff/shopping-bag--v1.png"/></Link> */}
-            <Link to=""><img src="https://img.icons8.com/ios/35/ffffff/shopping-cart.png"/></Link>
+            <Link to=""><img src="https://img.icons8.com/ios/35/ffffff/shopping-cart.png" alt="Carrinho de compras"/></Link>
           </Col>
         </Row>
       </div>
