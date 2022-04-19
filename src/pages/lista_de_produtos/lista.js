@@ -3,20 +3,23 @@ import { Button, Col, Container, Form, FormControl, Stack, Row } from 'react-boo
 
 //  Importação de Componentes
 import CardProduto from '../../components/ProdutoCard';
+import { API } from '../../components/BancoDeDados';
 
-const teste = { nome: "Nome do produto" };
-
-//  TODO: Substituir o array abaixo pelo banco de dados
-const produtos = Array(10).fill(teste);
+//  Importações do React
+import { useNavigate } from 'react-router-dom';
 
 const Lista = (props) => {
+
+  const [produtos, setProdutos] = API()
+  const navigate = useNavigate()
 
   return <>
     <main>
       <Container>
         <Row>
           <Stack direction="horizontal" gap={2}>
-            <Button href='/' variant="primary" type="button">Cadastrar produto</Button>
+            <Button variant="primary" type="button" onClick={() => navigate("/")}>Cadastrar produto</Button>
+
             <Form className="d-flex" >
               <FormControl
                 type="search"
@@ -24,8 +27,7 @@ const Lista = (props) => {
                 className="me-2"
                 aria-label="Search"
               />
-              {/* <Button type="submit" variant="outline-light">&#128269;</Button> */}
-              <Button type="submit" variant="outline-light"><img src="https://img.icons8.com/pastel-glyph/25/000000/search--v3.png"/></Button>
+              <Button type="submit" variant="outline-light"><img src="https://img.icons8.com/pastel-glyph/25/000000/search--v3.png" alt='Pesquisar'/></Button>
             </Form>
           </Stack>
         </Row>
@@ -33,7 +35,7 @@ const Lista = (props) => {
       
       <div style={{marginTop: '2em'}}>
         <Container>
-          <Row xs={2} md={'auto'} className="g-4">
+          <Row xs={2} md="auto" className="g-4">
             {produtos.map( produto => (
               <Col>{CardProduto(produto)}</Col>
             ))}

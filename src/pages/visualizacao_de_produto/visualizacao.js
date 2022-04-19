@@ -24,7 +24,7 @@ const Visualiza = (props) => {
                     </Row>
 
                     <Row>
-                      <Form.Label htmlFor="inf">Informações/Descrição</Form.Label>
+                      <Form.Label htmlFor="inf" >Informações/Descrição</Form.Label>
                     </Row>
                   
                     <Row>

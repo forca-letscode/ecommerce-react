@@ -25,9 +25,9 @@ A tela deve ser composta de:
 	- [X] Peso (campo numérico)
 	- [ ] Campo para upload de imagens `(se conseguir fazer)`
 - [X] Botão Salvar
-	- [ ] Realiza o salvamento e redireciona o usuário para a tela de listagem de produtos
+	- [X] Realiza o salvamento e redireciona o usuário para a tela de listagem de produtos
 - [X] Botão Cancelar
-	- [ ] Cancela a edição e retorna o usuário para a listagem de produtos
+	- [X] Cancela a edição e retorna o usuário para a listagem de produtos
 
 ### Tela de listagem de produto
 

@@ -8,7 +8,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 //  Importações de Componentes
 import { API } from '../../components/BancoDeDados';
 
-const Cadastro = (props) => {
+const Editar = (props) => {
 
   const [nome, setNome] = useState("")
   const [preco, setPreco] = useState("")
@@ -17,6 +17,8 @@ const Cadastro = (props) => {
   const [produtos, setProdutos] = API()
   const navigate = useNavigate()
   const {id} = useParams()
+
+  const editar_produto = produtos.find(o => o.id == id)
   
   const handlerSubmit = (event) => {
     event.preventDefault()
@@ -90,4 +92,4 @@ const Cadastro = (props) => {
   </>
 }
 
-export default Cadastro;
+export default Editar;
