@@ -10,6 +10,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Cadastro from './pages/cadastro_de_produto/cadastro';
 import Lista from './pages/lista_de_produtos/lista';
 import Visualiza from './pages/visualizacao_de_produto/visualizacao';
+import Editar from './pages/editar_produto/editar';
 import { CabecalhoRodape } from './pages/templates/Default/index';
 
 //  Importação de Componentes
@@ -27,7 +28,7 @@ root.render(
         <Routes>
 
           <Route path="/" element={<Cadastro />} />
-          <Route path="/:id" element={<Cadastro />} /> 
+          <Route path="/editar/:id" element={<Editar />} /> 
           <Route path="/lista" element={<Lista />} />
           <Route path="/visualizacao" element={<Visualiza />} />
           <Route path="/visualizacao/:id" element={<Visualiza />} />

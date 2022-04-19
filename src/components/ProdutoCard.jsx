@@ -13,7 +13,7 @@ export default function CriarCardProduto(produto) {
             </Link>
             <Card.Body>
                 <Card.Title>{produto.nome}</Card.Title>
-                <Button type='submit' onClick={() => navigate(`/${produto.id}`)} variant="success" size='sm'>Editar</Button>
+                <Button type='submit' onClick={() => navigate(`/editar/${produto.id}`)} variant="success" size='sm'>Editar</Button>
                 <Button type='button' variant="outline-danger" className='float-end' size='sm'>Excluir</Button>
             </Card.Body>
         </Card>
