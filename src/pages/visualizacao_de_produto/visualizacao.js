@@ -1,15 +1,15 @@
 //  Importações do Bootstrap
-import { Container, Form, Row, Col } from 'react-bootstrap';
+import { Button, Container, Form, Row, Col } from 'react-bootstrap';
 
 //  Importação do React
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 //  Importações de Componentes
 import { API } from '../../components/BancoDeDados';
 
 
 const Visualiza = (props) => {
-
+  const navigate = useNavigate()
   const [produtos, setProdutos] = API()
   const {id} = useParams()
 
@@ -22,7 +22,7 @@ const Visualiza = (props) => {
           <Form>
             <fieldset disabled>
               <Row >
-              
+              <h1>Detalhamento</h1>
                 <Col xs={4}>
                   <Row>
                     <Form.Group className="mb-3">
@@ -59,6 +59,13 @@ const Visualiza = (props) => {
                   </Row>
                 </Col>
                 
+              </Row>
+            </fieldset>
+            <fieldset>
+              <Row>
+                <div className="Cadastro">
+                  <Button  variant="primary" type='reset' onClick={() => navigate("/lista")}>Voltar</Button>
+                </div>
               </Row>
             </fieldset>
 

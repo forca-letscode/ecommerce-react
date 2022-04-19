@@ -33,7 +33,7 @@ const Cadastro = (props) => {
           <Form onSubmit={handlerSubmit}>
             <fieldset>
               <Row >
-              
+              <h1>Cadastro de produto</h1>
                 <Col xs={4}>
                   <Row>
                     <Form.Group className="mb-3">

@@ -6,16 +6,16 @@ import CardProduto from '../../components/ProdutoCard';
 import { API } from '../../components/BancoDeDados';
 
 //  Importações do React
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
-const Lista = (props) => {
-
+const Lista = () => {
+  const {id} = useParams()
   const [produtos, setProdutos] = API()
   const navigate = useNavigate()
 
   return <>
     <main>
-      <Container>
+      <Container> 
         <Row>
           <Stack direction="horizontal" gap={2}>
             <Button variant="primary" type="button" onClick={() => navigate("/")}>Cadastrar produto</Button>
@@ -27,7 +27,7 @@ const Lista = (props) => {
                 className="me-2"
                 aria-label="Search"
               />
-              <Button type="submit" variant="outline-light"><img src="https://img.icons8.com/pastel-glyph/25/000000/search--v3.png" alt='Pesquisar'/></Button>
+              <Button  variant="outline-light">&#128269;</Button>
             </Form>
           </Stack>
         </Row>
@@ -37,7 +37,7 @@ const Lista = (props) => {
         <Container>
           <Row xs={2} md="auto" className="g-4">
             {produtos.map( produto => (
-              <Col>{CardProduto(produto)}</Col>
+              <Col key={produto.id}>{CardProduto(produto)}</Col>
             ))}
           </Row>
         </Container>
