@@ -30,7 +30,6 @@ root.render(
           <Route path="/" element={<Cadastro />} />
           <Route path="/editar/:id" element={<Editar />} /> 
           <Route path="/lista" element={<Lista />} />
-          <Route path="/visualizacao" element={<Visualiza />} />
           <Route path="/visualizacao/:id" element={<Visualiza />} />
 
         </Routes>

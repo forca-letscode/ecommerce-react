@@ -59,8 +59,8 @@ A tela deve ser composta de:
  - [X] Cabeçalho (padrão toda aplicação);
  - [X] Rodapé (padrão toda aplicação);
  - [ ] Nela serão exibidas as informações:
-	 - [ ] Título
+	 - [X] Título
 	 - [ ] Foto
-	 - [ ] Preço
-	 - [ ] Informações/Descrição
-	 - [ ] Peso
+	 - [X] Preço
+	 - [X] Informações/Descrição
+	 - [X] Peso
