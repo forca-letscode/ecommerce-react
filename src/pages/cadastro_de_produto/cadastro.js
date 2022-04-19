@@ -1,17 +1,15 @@
 //  Importações do Bootstrap
-import { Button, Col, Container, Form, Row, Table } from 'react-bootstrap';
+import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 
 //  Importações do React
 import { useState } from "react";
+import { useNavigate, useParams } from 'react-router-dom';
 
 //  Importações de Componentes
 import { API } from '../../components/BancoDeDados';
-import { Link, useNavigate, useParams } from 'react-router-dom';
-
 
 const Cadastro = (props) => {
 
-  
   const [nome, setNome] = useState("")
   const [preco, setPreco] = useState("")
   const [inf, setInf] = useState("")
@@ -19,16 +17,13 @@ const Cadastro = (props) => {
   const [produtos, setProdutos] = API()
   const navigate = useNavigate()
   const {id} = useParams()
-  console.log(id)
   
   const handlerSubmit = (event) => {
     event.preventDefault()
-    console.log(produtos)
+    
     const lista = {id:produtos.length + 1, nome, preco, inf, peso}
     setProdutos([...produtos, lista])
-    console.log('Lista', lista);
     navigate('/Lista')
-    console.log('Produto', produtos);
   }
 
   return <>
@@ -82,10 +77,8 @@ const Cadastro = (props) => {
               <Row>
                 <div className="Cadastro">
                   <Button  variant="primary" type="submit">Salvar</Button>
-                  {/* <Link to='/Lista'>Salvar</Link> */}
                   &emsp;
-                  {/* <Button  variant="secondary" type='reset'>Cancelar</Button> */}
-                  <Link to='/Lista'>Cancelar</Link>
+                  <Button  variant="secondary" type='reset' onClick={() => navigate("/lista")}>Cancelar</Button>
                 </div>
               </Row>
             </fieldset>
@@ -93,34 +86,7 @@ const Cadastro = (props) => {
           </Form>
         </Container>
       </div>
-
-      <div>
-        <Table striped bordered hover>
-          <thead>
-            <tr>
-              <th>Id</th>
-              <th>Nome:</th>
-              <th>Preço</th>
-              <th>Informação</th>
-              <th>Peso</th>
-            </tr>
-          </thead>
-          <tbody>
-            {produtos.map((produt) => (
-            <tr key = {produt.id}>
-              <td>{produt.id}</td>
-              <td>{produt.nome}</td>
-              <td>{produt.preco}</td>
-              <td>{produt.inf}</td>
-              <td>{produt.peso}</td>
-            </tr>))}
-          </tbody>
-        </Table>
-      </div>
-
     </main>
-
-    
   </>
 }
 
