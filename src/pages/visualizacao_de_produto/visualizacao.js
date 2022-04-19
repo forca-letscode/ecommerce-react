@@ -1,44 +1,72 @@
 //  Importações do Bootstrap
 import { Container, Form, Row, Col } from 'react-bootstrap';
 
+//  Importação do React
+import { useParams } from 'react-router-dom';
+
+//  Importações de Componentes
+import { API } from '../../components/BancoDeDados';
+
+
 const Visualiza = (props) => {
 
-    return <>
-      <main>
-        <div className="Visualiza">
-          <Container>
-            <Form>
-              <fieldset>
-                <Row>
+  const [produtos, setProdutos] = API()
+  const {id} = useParams()
 
-                  <Col xs={6}>
-                    <Row>
-                      <Form.Label htmlFor="nome">Nome</Form.Label>
-                      <p>FOTO</p>
-                    </Row>
-                  </Col>
+  const produto = produtos.find(o => o.id == id)
+
+  return <>
+    <main>
+      <div>
+        <Container>
+          <Form>
+            <fieldset disabled>
+              <Row >
+              
+                <Col xs={4}>
+                  <Row>
+                    <Form.Group className="mb-3">
+                      <Form.Label htmlFor="nome">Nome:</Form.Label>
+                      <Form.Control value={produto.nome}/>
+                    </Form.Group>
+                  </Row>
+
+                  <Row>
+                    <Form.Group className="mb-3">
+                      <Form.Label htmlFor="preco">Preço:</Form.Label>
+                      <Form.Control value={produto.preco}/>
+                    </Form.Group>
+                  </Row>
+
+                  <Row>
+                    <Form.Group className="mb-3">
+                      <Form.Label htmlFor="inf">Descrição:</Form.Label>
+                      <Form.Control value={produto.inf} as="textarea"/>
+                    </Form.Group>
+                  </Row>
                 
-                  <Col xs={4}>
-                    <Row>
-                      <Form.Label htmlFor="preco">Preço</Form.Label>
-                    </Row>
+                  <Row>
+                    <Form.Group className="mb-3">
+                      <Form.Label htmlFor="peso">Peso:</Form.Label>
+                      <Form.Control value={produto.peso}/>
+                    </Form.Group>
+                  </Row>
+                </Col>
+                
+                <Col xs={6}>
+                  <Row>
+                    Foto
+                  </Row>
+                </Col>
+                
+              </Row>
+            </fieldset>
 
-                    <Row>
-                      <Form.Label htmlFor="inf" >Informações/Descrição</Form.Label>
-                    </Row>
-                  
-                    <Row>
-                      <Form.Label htmlFor="peso">Peso</Form.Label>
-                    </Row>
-
-                  </Col>
-                </Row>
-              </fieldset>
-            </Form>
-          </Container>
-        </div>
-      </main>
-    </>
+          </Form>
+        </Container>
+      </div>
+    </main>
+  </>
 }
   
 export default Visualiza;
