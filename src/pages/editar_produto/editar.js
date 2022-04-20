@@ -35,7 +35,7 @@ const Editar = (props) => {
           <Form onSubmit={handlerSubmit}>
             <fieldset>
               <Row >
-              
+              <h1>Editar produto</h1>
                 <Col xs={4}>
                   <Row>
                     <Form.Group className="mb-3">
@@ -78,7 +78,7 @@ const Editar = (props) => {
             <fieldset>
               <Row>
                 <div className="Cadastro">
-                  <Button  variant="primary" type="submit">Salvar</Button>
+                  <Button  variant="primary" >Salvar</Button>
                   &emsp;
                   <Button  variant="secondary" type='reset' onClick={() => navigate("/lista")}>Cancelar</Button>
                 </div>
@@ -91,5 +91,12 @@ const Editar = (props) => {
     </main>
   </>
 }
+
+/* 
+export function DeletarId(id) {
+  const idfiltrado = produtos.filter(obj => obj.id !== id)
+  setProdutos([...produtos])
+} */
+
 
 export default Editar;

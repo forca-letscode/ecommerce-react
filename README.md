@@ -46,7 +46,7 @@ A tela deve ser composta de:
 	- [X] Botão de excluir
 		- [ ] Remove o produto
 	- [X] Botão de editar
-		- [ ] Abre a tela de edição do produto
+		- [X] Abre a tela de edição do produto
 	- [X] Título do produto
 	- [X] Ao clicar no produto será aberta uma tela de visualização
 
@@ -59,8 +59,8 @@ A tela deve ser composta de:
  - [X] Cabeçalho (padrão toda aplicação);
  - [X] Rodapé (padrão toda aplicação);
  - [ ] Nela serão exibidas as informações:
-	 - [ ] Título
+	 - [X] Título
 	 - [ ] Foto
-	 - [ ] Preço
-	 - [ ] Informações/Descrição
-	 - [ ] Peso
+	 - [X] Preço
+	 - [X] Informações/Descrição
+	 - [X] Peso
