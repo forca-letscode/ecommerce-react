@@ -46,7 +46,7 @@ A tela deve ser composta de:
 	- [X] Botão de excluir
 		- [ ] Remove o produto
 	- [X] Botão de editar
-		- [ ] Abre a tela de edição do produto
+		- [X] Abre a tela de edição do produto
 	- [X] Título do produto
 	- [X] Ao clicar no produto será aberta uma tela de visualização
 
