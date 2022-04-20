@@ -1,5 +1,4 @@
 //  Importações do Bootstrap
-import { useEffect, useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
 
 //  Importação do React
@@ -24,7 +23,7 @@ export default function CriarCardProduto(produto) {
 
     
     return <>
-        <Card key={produto.id} style={{ width: '18rem' }}>
+        <Card style={{ width: '18rem' }}>
             <Link to={`/visualizacao/${produto.id}`}>
                 <Card.Img variant="top" src="https://img.icons8.com/ios-glyphs/240/000000/react.png" alt="Imagem do produto"/>
             </Link>
